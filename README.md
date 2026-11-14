@@ -37,9 +37,8 @@ The dataset is simulated: 19,000 customers across 24 tables covering contracts, 
 
 ## How to run
 
-1. Place the cleaned Excel data in a `data/` folder.
-2. Install the packages: `pip install -r requirements.txt`
-3. Run the notebooks in order, Phase 1 to Phase 3.
+1. Install the packages: `pip install -r requirements.txt`
+2. Run the notebooks in order, Phase 1 to Phase 3.
 
 ## Tech stack
 
