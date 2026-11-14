@@ -1,33 +1,50 @@
 # NexaTel Customer Churn Analytics
 
-## Overview
-Analyzed a 19,000-customer relational dataset (contracts, billing, support tickets, 
-complaints, feedback, network quality) to identify key drivers of customer churn 
-for a telecom business, and built a 5-page Power BI dashboard with actionable 
-retention recommendations for senior stakeholders.
+Python and Power BI analysis of a simulated telecom customer base: data quality checks, exploratory analysis, churn KPIs, a 5-page dashboard and a management report.
 
-## Key Findings
-- Overall churn rate: 18.5% (3,506 of 19,000 customers)
-- 62% of churn happens within the first 6 months of customer tenure
-- Customers with low satisfaction scores churn at nearly 2x the rate of satisfied customers
-- Mass-market segment churns at 26.7% vs. 11.9% for Enterprise customers
-- ₹27M in annualized recurring revenue already lost to churn
+**Business question:** Which customers and segments is NexaTel losing, and what separates the customers who stay?
+
+## Key findings
+
+| Metric | Result |
+| --- | --- |
+| Customers analysed | 19,000 across 24 related tables |
+| Overall churn | **18.45%** (3,506 customers) |
+| Churn by segment | Mass **26.7%** vs Enterprise **11.9%** (about 2.2x) |
+| Churn by product line | Ranges from 6.2% to 23.2% |
+| Retention offers | 86.8% of customers who accepted an offer were retained vs 79.2% of those who declined |
+| Data quality issues flagged | 172 future-dated invoices, 229 negative billing amounts, plus invalid ages, PIN codes and phone numbers |
+
+## Project phases
+
+| Phase | What I did | File |
+| --- | --- | --- |
+| 1. Data quality checks | Checked the 24 tables for missing values, duplicates, invalid formats, date logic and referential integrity; flagged issues without altering the source data. | `Phase1_DataCleaning_Mayuri_Maneguldhe.ipynb` |
+| 2. Exploratory data analysis | Pandas and Matplotlib analysis of churn by segment, product line, tenure, plan and region. | `Phase2_EDA_Mayuri_Maneguldhe.ipynb` |
+| 3. KPI calculation | Churn rate, segment and product-line churn, retention-offer outcomes and revenue KPIs. | `Phase3_KPIs_Mayuri_Maneguldhe.ipynb` |
+| 4. Dashboard and report | 5-page Power BI dashboard with 20+ DAX measures and a management report. | `Phase4_Dashboard_Mayuri_Maneguldhe.pbix`, `Phase4_Report_Mayuri_Maneguldhe.docx` |
 
 ## Dashboard
-5-page interactive Power BI dashboard covering:
-- Executive Overview (churn rate, revenue, key metrics)
-- Customer & Segment analysis
-- Service & Support analysis
-- Network & Regional analysis
-- Campaigns & Revenue analysis
 
-## Files in this repo
-- `Phase4_Dashboard_Mayuri_Maneguldhe.pbix` — Power BI dashboard file
-- `Phase4_Report_Mayuri_Maneguldhe.pdf` — Management summary report
-- Chart images — key visual findings
+Pages: Executive Overview, Customer & Segment, Service & Support, Network & Regional, Campaigns & Revenue.
 
-## Tools Used
-Power BI, Excel, Python (Pandas)
+Open `Phase4_Dashboard_Mayuri_Maneguldhe.pbix` in Power BI Desktop (free), or see `Phase4_Dashboard_Mayuri_Maneguldhe.pdf` for a static export.
 
-## Video Walkthrough
-[Link to LinkedIn post video](paste your post link here)
+
+## Data
+
+The dataset is simulated: 19,000 customers across 24 tables covering contracts, billing, payments, complaints, support tickets, network quality, retention campaigns and geography. The raw data file is not included in this repository.
+
+## How to run
+
+1. Place the cleaned Excel data in a `data/` folder.
+2. Install the packages: `pip install -r requirements.txt`
+3. Run the notebooks in order, Phase 1 to Phase 3.
+
+## Tech stack
+
+Python (pandas, NumPy, Matplotlib) · Power BI (DAX) · Excel · Jupyter Notebook
+
+## Author
+
+Mayuri Maneguldhe · [GitHub](https://github.com/mayurimaneguldhe-a11y) · [LinkedIn](https://www.linkedin.com/in/mayuri-maneguldhe-558621309)
